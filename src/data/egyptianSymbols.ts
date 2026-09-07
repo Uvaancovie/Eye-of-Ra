@@ -1,0 +1,161 @@
+import { SymbolDefinition } from '../types';
+
+export const LION_SYMBOL_IMAGE_URL =
+  'https://vydleiyxfqrhxoddbcpi.supabase.co/storage/v1/object/public/gambling-symbols/mystic-lion-symbol.jpg';
+
+export const GOLDEN_SPHINX_SYMBOL_IMAGE_URL =
+  'https://vydleiyxfqrhxoddbcpi.supabase.co/storage/v1/object/public/gambling-symbols/golden-sphinx-symbol.png';
+
+export const GOLDEN_SARCOPHAGUS_IMAGE_URL =
+  'https://vydleiyxfqrhxoddbcpi.supabase.co/storage/v1/object/public/gambling-symbols/golden-sarcophagus-symbol-bg-removebg-preview(1).png';
+
+export const BONUS_CHEST_SYMBOL_IMAGE_URL =
+  'https://vydleiyxfqrhxoddbcpi.supabase.co/storage/v1/object/public/gambling-symbols/bonus-treasure-chest.jpg';
+
+export const EGYPTIAN_SYMBOLS: Record<string, SymbolDefinition> = {
+  eye_of_ra: {
+    id: 'eye_of_ra',
+    name: 'Majestic Lion (Wild)',
+    category: 'wild',
+    payouts: { 3: 50, 4: 250, 5: 1000 },
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.95)',
+    description: 'Majestic Mystic Lion Wild! Substitutes for all regular symbols and multiplies line payouts.',
+    svgIcon: 'eye_of_ra',
+    imageUrl: LION_SYMBOL_IMAGE_URL,
+  },
+  scarab: {
+    id: 'scarab',
+    name: 'Treasure Chest (Bonus)',
+    category: 'bonus_scatter',
+    payouts: { 3: 15, 4: 75, 5: 300 },
+    color: '#e11d48',
+    glowColor: 'rgba(225, 29, 72, 0.9)',
+    description: '3+ Jeweled Chests trigger the Pharaoh Ra Pick & Win Golden Vault Bonus Game!',
+    svgIcon: 'scarab',
+    imageUrl: BONUS_CHEST_SYMBOL_IMAGE_URL,
+  },
+  book_of_dead: {
+    id: 'book_of_dead',
+    name: 'Horus Golden Falcon (Scatter)',
+    category: 'free_scatter',
+    payouts: { 3: 20, 4: 100, 5: 500 },
+    color: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.9)',
+    description: '3+ Horus Scatters award 10 to 25 Free Spins with expanding special symbols & wild multipliers!',
+    svgIcon: 'book_of_dead',
+  },
+  pharaoh_mask: {
+    id: 'pharaoh_mask',
+    name: 'Golden Sarcophagus',
+    category: 'high',
+    payouts: { 3: 40, 4: 200, 5: 800 },
+    color: '#eab308',
+    glowColor: 'rgba(234, 179, 8, 0.9)',
+    description: 'Gilded Royal Sarcophagus with crook and flail. Hit 5 on line 1 for the Grand Jackpot!',
+    svgIcon: 'pharaoh_mask',
+    imageUrl: GOLDEN_SARCOPHAGUS_IMAGE_URL,
+  },
+  cleopatra: {
+    id: 'cleopatra',
+    name: 'Golden Sphinx',
+    category: 'high',
+    payouts: { 3: 30, 4: 150, 5: 600 },
+    color: '#f59e0b',
+    glowColor: 'rgba(245, 158, 11, 0.9)',
+    description: 'Sculpted Golden Sphinx of Giza bringing monumental treasures.',
+    svgIcon: 'cleopatra',
+    imageUrl: GOLDEN_SPHINX_SYMBOL_IMAGE_URL,
+  },
+  anubis: {
+    id: 'anubis',
+    name: 'Glowing Sun Pyramid',
+    category: 'high',
+    payouts: { 3: 25, 4: 120, 5: 450 },
+    color: '#fbbf24',
+    glowColor: 'rgba(251, 191, 36, 0.9)',
+    description: 'Ancient Pyramid with radiant glowing golden capstone.',
+    svgIcon: 'anubis',
+  },
+  horus_falcon: {
+    id: 'horus_falcon',
+    name: 'Horus Winged Falcon',
+    category: 'medium',
+    payouts: { 3: 20, 4: 80, 5: 300 },
+    color: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.8)',
+    description: 'God of the skies with lapis lazuli and gold feathers.',
+    svgIcon: 'horus_falcon',
+  },
+  ankh: {
+    id: 'ankh',
+    name: 'Golden Ankh of Eternity',
+    category: 'medium',
+    payouts: { 3: 15, 4: 60, 5: 200 },
+    color: '#eab308',
+    glowColor: 'rgba(234, 179, 8, 0.8)',
+    description: 'Beveled gold ankh with turquoise celestial gemstone.',
+    svgIcon: 'ankh',
+  },
+  bastet_cat: {
+    id: 'bastet_cat',
+    name: 'Golden Pyramid Peak',
+    category: 'medium',
+    payouts: { 3: 12, 4: 50, 5: 150 },
+    color: '#f59e0b',
+    glowColor: 'rgba(245, 158, 11, 0.8)',
+    description: 'Gilded monolith pyramid capturing the first rays of Ra.',
+    svgIcon: 'bastet_cat',
+  },
+  royal_a: {
+    id: 'royal_a',
+    name: 'Ruby Jewel Ace',
+    category: 'low',
+    payouts: { 3: 8, 4: 30, 5: 100 },
+    color: '#f43f5e',
+    glowColor: 'rgba(244, 63, 94, 0.8)',
+    description: 'Crimson speckled letter with emerald diamond core and gold bevel.',
+    svgIcon: 'royal_a',
+  },
+  royal_k: {
+    id: 'royal_k',
+    name: 'Golden Crown King',
+    category: 'low',
+    payouts: { 3: 6, 4: 25, 5: 80 },
+    color: '#f59e0b',
+    glowColor: 'rgba(245, 158, 11, 0.8)',
+    description: 'Beveled gold letter King with turquoise diamond stud.',
+    svgIcon: 'royal_k',
+  },
+  royal_q: {
+    id: 'royal_q',
+    name: 'Golden Solar Queen',
+    category: 'low',
+    payouts: { 3: 5, 4: 20, 5: 60 },
+    color: '#eab308',
+    glowColor: 'rgba(234, 179, 8, 0.8)',
+    description: 'Sculpted solid gold loop Queen with turquoise inlay.',
+    svgIcon: 'royal_q',
+  },
+  royal_j: {
+    id: 'royal_j',
+    name: 'Lapis Lazuli Jack',
+    category: 'low',
+    payouts: { 3: 4, 4: 15, 5: 50 },
+    color: '#0284c7',
+    glowColor: 'rgba(2, 132, 199, 0.8)',
+    description: 'Deep royal blue Jack with turquoise teardrop ornament.',
+    svgIcon: 'royal_j',
+  },
+  royal_10: {
+    id: 'royal_10',
+    name: 'Ruby Ingot Ten',
+    category: 'low',
+    payouts: { 3: 3, 4: 10, 5: 40 },
+    color: '#dc2626',
+    glowColor: 'rgba(220, 38, 38, 0.8)',
+    description: 'Beveled crimson ruby Ten with gold trim.',
+    svgIcon: 'royal_10',
+  },
+};
+

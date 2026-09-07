@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0a0a0c;
+    color: #f4e4bc;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  h1, h2, h3, .font-cinzel {
+    font-family: var(--font-cinzel);
+  }
+}
+
+/* Background Hieroglyphic / Geometric Backdrop */
+.sophisticated-dark-bg {
+  background-color: #0a0a0c;
+  background-image: 
+    radial-gradient(circle at 50% 15%, rgba(45, 30, 20, 0.45) 0%, rgba(10, 10, 12, 0.95) 75%),
+    radial-gradient(circle at 85% 85%, rgba(30, 20, 45, 0.3) 0%, transparent 60%),
+    radial-gradient(circle at 15% 85%, rgba(20, 35, 45, 0.3) 0%, transparent 60%);
+}
+
+/* Custom Egyptian Animations & Effects */
+@keyframes goldShine {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(200%) rotate(45deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(217, 119, 6, 0.35), inset 0 0 10px rgba(245, 158, 11, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.7), inset 0 0 20px rgba(251, 191, 36, 0.4); }
+}
+
+@keyframes flameFlicker {
+  0%, 100% { transform: scale(1) rotate(-1deg); opacity: 0.9; }
+  50% { transform: scale(1.08) rotate(1.5deg); opacity: 1; }
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-gold-shine {
+  animation: goldShine 3.5s infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+.animate-flame {
+  animation: flameFlicker 2s infinite ease-in-out;
+}
+
+.animate-float {
+  animation: floatOrb 3s infinite ease-in-out;
+}
+
+/* Custom Scrollbar for Sophisticated Dark theme */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #78350f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* Sophisticated Dark Gilded & Gem Gradients */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #fff3b0 0%, #fcd34d 30%, #d97706 70%, #fef08a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ruby-text-gradient {
+  background: linear-gradient(135deg, #fca5a5 0%, #ef4444 40%, #991b1b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cyan-text-gradient {
+  background: linear-gradient(135deg, #a5f3fc 0%, #06b6d4 50%, #0e7490 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to bottom, #fcd34d, #b45309, #451a03) 1;
+}
+
