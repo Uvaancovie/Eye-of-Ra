@@ -161,7 +161,17 @@ export default function App() {
     if (isSpinning) return;
     if (!isFreeSpins && profile.balance < totalBet) {
       // Prompt low balance warning / free demo reload
-      alert('Your balance is low! We have granted you +25,000 Demo Gold to keep spinning.');
+      setNotifications((prev) => [
+        {
+          id: 'notif_' + Date.now(),
+          title: "Pharaoh's Blessing",
+          message: 'Your balance was low! Granted +25,000 Demo Gold to keep spinning.',
+          timestamp: Date.now(),
+          read: false,
+          type: 'reward',
+        },
+        ...prev,
+      ]);
       setProfile((prev) => ({ ...prev, balance: prev.balance + 25000 }));
       return;
     }
